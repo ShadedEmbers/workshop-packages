@@ -1,9 +1,10 @@
 {
-  "name": "github-packages",
+  "name": "example-package",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "repository": "https://github.com/ShadedEmbers/workshop-packages",
   "scripts": {
     "build": "tsc -p tsconfig.build.json"
   },
