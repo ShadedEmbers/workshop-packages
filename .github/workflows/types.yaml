@@ -28,7 +28,7 @@ jobs:
 
       - name: publish
         run: |
-            cd src/packages/types
+            cd src/types
             npm ci
             npm run build
             npm publish
