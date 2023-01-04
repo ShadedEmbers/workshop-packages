@@ -10,27 +10,23 @@ on:
 
 jobs:
   publish:
+
     runs-on: ubuntu-latest
     permissions:
       packages: write
       contents: read
+
     steps:
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: checkout
         uses: actions/checkout@v3
 
       - name:
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
         uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
 
       - name: publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
         run: |
             cd src/packages/types
             npm ci
